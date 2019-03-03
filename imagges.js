@@ -1,28 +1,28 @@
-var mayimage = document.querySelector('img');
-mayimage.onclick  = function()
+var image = document.querySelector('img');
+image.onclick  = function()
 {
-    var maysorce=mayimage.getAttribute('src');
-    if(maysorce==='images/image1.jpg')
+    var sorce=image.getAttribute('src');
+    if(sorce==='image1.jpg')
     {
-        mayimage.setAttribute('src','images/image2.jpg');
+        image.setAttribute('src','image2.jpg');
     }
-    else if(maysorce==='images/image2.jpg')
+    else if(sorce==='image2.jpg')
     {
-        mayimage.setAttribute('src','images/image3.jpg');
+        image.setAttribute('src','image3.jpg');
     }
-    else if(maysorce==='images/image3.jpg')
+    else if(sorce==='image3.jpg')
     {
-        mayimage.setAttribute('src','images/image1.jpg');
+        image.setAttribute('src','image1.jpg');
     }
     
 }
-var myButton=document.querySelector('button');
+var myButton=document.querySelector('#i');
 var myHeading=document.querySelector('h1');
 function setUserName()
 {
-  var myName=prompt('Please Enter your Name.');
+  var myName=prompt('Enter The Name:');
   localStorage.setItem('name',myName);
-  myHeading.textContent='Well come to'+' '+myName +' '+' profile';
+  myHeading.textContent='Well come to Profile'+' '+myName ;
 
 }
 if(!localStorage.getItem('name'))
@@ -33,7 +33,7 @@ if(!localStorage.getItem('name'))
 else
 {
     var storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Well come to '+'  '  + storedName + ' '+' profile';
+    myHeading.textContent = 'Well come to Profile '+'  '  + storedName ;
 }
 myButton.onclick = function() {
     setUserName();
